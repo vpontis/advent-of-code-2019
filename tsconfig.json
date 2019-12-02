@@ -6,7 +6,7 @@
     "moduleResolution": "node",
     "module": "commonjs",
     "noImplicitReturns": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "outDir": "lib",
     "sourceMap": false,
     "strict": false,
