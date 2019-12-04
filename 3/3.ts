@@ -7,7 +7,7 @@ const getWires = async (): Promise<[Wire, Wire]> => {
   const fileHandle = await fs.open("3/input.txt", "r");
   const contentBuffer = await fileHandle.readFile();
   const content = contentBuffer.toString().trim();
-  const [wire1, wire2] = content.split("\n").map(wire => wire.split(","));
+  const [wire1, wire2] = content.split("\n").slice(0, 2).map(wire => wire.split(","));
   console.log(wire1.length, wire2.length);
   return [wire1, wire2] as [Wire, Wire];
 };
@@ -99,11 +99,44 @@ const partOne = async () => {
   console.log(pointToManhattan(smallest));
 };
 
-const partTwo = async () => {};
+const partTwo = async () => {
+  const wires = await getWires();
+
+  const [path1, path2] = wires.map(getPathFromWire);
+
+  const set1 = new Set(path1.map(pointToString));
+
+  const intersections: Point[] = path2.filter(point =>
+    set1.has(pointToString(point))
+  );
+  console.log(intersections.length);
+
+  const distances = intersections.map(intersection => {
+    const intString = pointToString(intersection);
+    const path1Index = _.findIndex(
+      path1,
+      point => pointToString(point) === intString
+    );
+
+    const path2Index = _.findIndex(
+      path2,
+      point => pointToString(point) === intString
+    );
+    console.log(
+      intersection,
+      path1Index,
+      path2Index,
+      set1.has(pointToString(intersection))
+    );
+    return path1Index + path2Index + 2;
+  });
+
+  console.log(_.min(distances));
+};
 
 const main = async () => {
-  await partOne();
-  // await partTwo();
+  // await partOne();
+  await partTwo();
 };
 
 main();
