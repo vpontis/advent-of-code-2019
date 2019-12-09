@@ -144,7 +144,7 @@ def try_phases(numbers, phases):
 def tryrun(numbers):
     outputs = []
     for phases in itertools.permutations(list(range(0 + 5, 5 + 5))):
-    # for phases in [[9, 8, 7, 6, 5]]:
+        # for phases in [[9, 8, 7, 6, 5]]:
         phases = list(phases)
 
         print(phases)
