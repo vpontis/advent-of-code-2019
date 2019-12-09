@@ -41,22 +41,19 @@ def get_vals(numbers: List[int], position: int, modes: List[str], num_vals: int,
     return vals
 
 
-relative_base = 0
-
-
 def run_operation(
         numbers: List[int], position: int, inputs: List[int],
-) -> Tuple[Optional[int], Optional[int]]:
-    global relative_base
-
+        relative_base: int
+) -> Tuple[Optional[int], Optional[int], int]:
     code_info = parse_opcode(numbers[position])
     code = code_info['code']
     modes = code_info['modes']
     # print(code, position, numbers)
 
     if code == 99:
-        return (None, None)
+        return None, None, relative_base
 
+    # add / multiply
     if code in [1, 2]:
         [val1, val2, destination] = get_vals(numbers, position + 1, modes, 2, relative_base)
 
@@ -66,48 +63,54 @@ def run_operation(
             result = val1 * val2
 
         numbers[destination] = result
-        return (position + 4, None)
+        return position + 4, None, relative_base
 
+    # get input
     if code == 3:
         [destination] = get_vals(numbers, position + 1, modes, 0, relative_base)
 
         num_input = inputs.pop(0)
 
         numbers[destination] = num_input
-        return (position + 2, None)
+        return position + 2, None, relative_base
 
+    # print output
     if code == 4:
         [val1, _destination] = get_vals(numbers, position + 1, modes, 1, relative_base)
-        return (position + 2, val1)
+        return position + 2, val1, relative_base
 
+    # jump if non-zero
     if code == 5:
         [val1, val2, _destination] = get_vals(numbers, position + 1, modes, 2, relative_base)
         should_jump = val1 != 0
         if should_jump:
-            return (val2, None)
-        return (position + 3, None)
+            return val2, None, relative_base
+        return position + 3, None, relative_base
 
+    # jump if zero
     if code == 6:
         [val1, val2, _destination] = get_vals(numbers, position + 1, modes, 2, relative_base)
         should_jump = val1 == 0
         if should_jump:
-            return (val2, None)
-        return (position + 3, None)
+            return val2, None, relative_base
+        return position + 3, None, relative_base
 
+    # compare - less than
     if code == 7:
         [val1, val2, destination] = get_vals(numbers, position + 1, modes, 2, relative_base)
         numbers[destination] = 1 if val1 < val2 else 0
-        return (position + 4, None)
+        return position + 4, None, relative_base
 
+    # compare - equals
     if code == 8:
         [val1, val2, destination] = get_vals(numbers, position + 1, modes, 2, relative_base)
         numbers[destination] = 1 if val1 == val2 else 0
-        return (position + 4, None)
+        return position + 4, None, relative_base
 
+    # update relative base
     if code == 9:
         [val1, _destination] = get_vals(numbers, position + 1, modes, 1, relative_base)
-        relative_base += val1
-        return (position + 2, None)
+        return (position + 2, None, relative_base + val1)
 
     print('fucking code', code)
     raise Exception('fuck')
@@ -116,6 +119,7 @@ def run_operation(
 class Amp:
     position: int = 0
     is_done: bool = False
+    relative_base: int = 0
 
     def __init__(self, name, numbers, inputs):
         self.name = name
@@ -130,10 +134,17 @@ class Amp:
             raise Exception('fuc')
 
         while self.position is not None:
-            result = run_operation(self.numbers, self.position, self.inputs)
-            (position, output) = result
+            result = run_operation(
+                self.numbers,
+                self.position,
+                self.inputs,
+                self.relative_base,
+            )
+
+            (position, output, new_relative_base) = result
 
             self.position = position
+            self.relative_base = new_relative_base
 
             if output is not None:
                 return False, output
@@ -149,23 +160,7 @@ class Amp:
         return f'<Amp {self.name=} {self.inputs=}>'
 
 
-def try_phases(numbers, phases):
-    amps = [Amp(i, numbers[:], [phases[i]]) for i in range(0, 5)]
-    amps[0].add_input(0)
-
-    while any([not amp.is_done for amp in amps]):
-        for i, amp in enumerate(amps):
-            is_done, output = amp.run()
-
-            if output is not None:
-                next_amp_idx = (i + 1) % 5
-                amps[next_amp_idx].add_input(output)
-
-    return amps[0].all_inputs[-1]
-
-
 def tryrun(numbers):
-    outputs = []
     print(numbers)
 
     numbers = numbers + ([0] * 10000)
@@ -180,16 +175,6 @@ def tryrun(numbers):
             amp.add_input(output)
 
     print(amp.all_inputs)
-    # for phases in itertools.permutations(list(range(0 + 5, 5 + 5))):
-    #     # for phases in [[9, 8, 7, 6, 5]]:
-    #     phases = list(phases)
-    #
-    #     print(phases)
-    #     result = try_phases(numbers, phases)
-    #     print(result)
-    #     outputs.append(result)
-    #
-    # print(max(outputs))
 
 
 with open('./9.txt') as f:
