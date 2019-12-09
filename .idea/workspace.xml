@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2e4ee0e-41d3-424e-9146-2e2f48743447" name="Default Changelist" comment="k">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/6/6.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/6/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/advent-of-code-2019.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,28 +22,20 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="/usr/local/Cellar/node/13.2.0/bin/node" />
     <property name="nodejs_package_manager_path" value="/usr/local/Cellar/yarn/1.19.2/libexec" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.TypeScript" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Python.6">
+  <component name="RunManager" selected="Node.js.ts-node">
     <configuration name="ts-node" type="NodeJSConfigurationType" node-parameters="--require ts-node/register" path-to-js-file="$FilePathRelativeToProjectRoot$" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
@@ -72,6 +53,50 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/6/6.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="7" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="advent-of-code-2019" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/7" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/7/7.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="8" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="advent-of-code-2019" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/8" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/8/8.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -104,14 +129,23 @@
     </configuration>
     <list>
       <item itemvalue="Node.js.ts-node" />
-      <item itemvalue="Python.Advent" />
       <item itemvalue="Python.6" />
+      <item itemvalue="Python.7" />
+      <item itemvalue="Python.8" />
+      <item itemvalue="Python.Advent" />
     </list>
-    <recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <item itemvalue="Python.6" />
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
-    </recent_temporary>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -127,7 +161,9 @@
       <workItem from="1575450276963" duration="3964000" />
       <workItem from="1575499464882" duration="2992000" />
       <workItem from="1575607929634" duration="47000" />
-      <workItem from="1575608001777" duration="1088000" />
+      <workItem from="1575608001777" duration="1245000" />
+      <workItem from="1575694319413" duration="464000" />
+      <workItem from="1575694887449" duration="1413000" />
     </task>
     <servers />
   </component>
@@ -152,22 +188,26 @@
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="1171" y="393" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2560.1417/2560.23.2560.1417@0.23.2560.1417" timestamp="1575499468976" />
-    <state width="1236" height="408" key="GridCell.Tab.0.bottom" timestamp="1575568855986">
-      <screen x="0" y="23" width="2560" height="1417" />
+    <state width="1396" height="408" key="GridCell.Tab.0.bottom" timestamp="1575748960447">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1236" height="408" key="GridCell.Tab.0.bottom/0.23.2560.1417/2560.23.2560.1417@0.23.2560.1417" timestamp="1575568855986" />
-    <state width="1236" height="408" key="GridCell.Tab.0.center" timestamp="1575568855984">
-      <screen x="0" y="23" width="2560" height="1417" />
+    <state width="1396" height="408" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1575748960447" />
+    <state width="1662" height="408" key="GridCell.Tab.0.bottom/0.23.2560.1417/2560.23.2560.1417@0.23.2560.1417" timestamp="1575695009579" />
+    <state width="1396" height="408" key="GridCell.Tab.0.center" timestamp="1575748960446">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1236" height="408" key="GridCell.Tab.0.center/0.23.2560.1417/2560.23.2560.1417@0.23.2560.1417" timestamp="1575568855984" />
-    <state width="1236" height="408" key="GridCell.Tab.0.left" timestamp="1575568855983">
-      <screen x="0" y="23" width="2560" height="1417" />
+    <state width="1396" height="408" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1575748960446" />
+    <state width="1662" height="408" key="GridCell.Tab.0.center/0.23.2560.1417/2560.23.2560.1417@0.23.2560.1417" timestamp="1575695009570" />
+    <state width="1396" height="408" key="GridCell.Tab.0.left" timestamp="1575748960445">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1236" height="408" key="GridCell.Tab.0.left/0.23.2560.1417/2560.23.2560.1417@0.23.2560.1417" timestamp="1575568855983" />
-    <state width="1236" height="408" key="GridCell.Tab.0.right" timestamp="1575568855985">
-      <screen x="0" y="23" width="2560" height="1417" />
+    <state width="1396" height="408" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1575748960445" />
+    <state width="1662" height="408" key="GridCell.Tab.0.left/0.23.2560.1417/2560.23.2560.1417@0.23.2560.1417" timestamp="1575695009569" />
+    <state width="1396" height="408" key="GridCell.Tab.0.right" timestamp="1575748960447">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1236" height="408" key="GridCell.Tab.0.right/0.23.2560.1417/2560.23.2560.1417@0.23.2560.1417" timestamp="1575568855985" />
+    <state width="1396" height="408" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1575748960447" />
+    <state width="1662" height="408" key="GridCell.Tab.0.right/0.23.2560.1417/2560.23.2560.1417@0.23.2560.1417" timestamp="1575695009577" />
     <state x="1216" y="370" key="SettingsEditor" timestamp="1575266191568">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
@@ -176,13 +216,9 @@
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="1373" y="492" width="667" height="478" key="find.popup/0.23.2560.1417/2560.23.2560.1417@0.23.2560.1417" timestamp="1575487135480" />
-    <state x="1370" y="346" width="672" height="678" key="search.everywhere.popup" timestamp="1575522468969">
+    <state x="1370" y="346" width="672" height="678" key="search.everywhere.popup" timestamp="1575844784052">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
-    <state x="1370" y="346" width="672" height="678" key="search.everywhere.popup/0.23.2560.1417/2560.23.2560.1417@0.23.2560.1417" timestamp="1575522468969" />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/advent_of_code_2019$Advent.coverage" NAME="Advent Coverage Results" MODIFIED="1575608267926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/advent_of_code_2019$6.coverage" NAME="6 Coverage Results" MODIFIED="1575609102286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6" />
+    <state x="1370" y="346" width="672" height="678" key="search.everywhere.popup/0.23.2560.1417/2560.23.2560.1417@0.23.2560.1417" timestamp="1575844784052" />
   </component>
 </project>
