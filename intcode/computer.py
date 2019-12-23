@@ -68,6 +68,8 @@ def run_operation(
     if code == 3:
         [destination] = get_vals(numbers, position + 1, modes, 0, relative_base)
 
+        # print('getting input', inputs)
+
         # consider taking in a function
         if len(inputs) == 0:
             raise Exception('Need input')
@@ -129,7 +131,7 @@ class Computer:
 
     def __init__(self, name, numbers, inputs, get_input=None):
         self.name = name
-        self.numbers = numbers + [0] * 10_000
+        self.numbers = numbers + [0] * 1_000
         self.inputs = inputs[:]
         self.all_inputs = inputs[:]
         self.get_input = get_input
@@ -152,7 +154,7 @@ class Computer:
             except Exception as e:
                 if str(e) == 'Need input':
                     if not self.get_input:
-                        raise Exception('Missing get input function')
+                        raise Exception('Need input')
 
                     input_num = self.get_input()
                     self.add_input(input_num)
